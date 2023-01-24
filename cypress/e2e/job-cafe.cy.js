@@ -36,6 +36,8 @@ describe('Job Cafe sanity spec',{defaultCommandTimeout: 20000}, () => {
     cy.visit('http://167.99.178.249:3000/job-page')
     cy.completeSearch("QA","USA", "Apple")
     cy.get('[class ="post-item clearfix"]').contains ('QA').should ('be.visible')
+    cy.get ('p').contains ('Apple').should('be.visible')
+    cy.get ('span').contains ('USA').should('be.visible')
   })  
 
 
